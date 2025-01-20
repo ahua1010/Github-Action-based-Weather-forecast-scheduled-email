@@ -22,12 +22,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt  # 確保您有 requirements.txt 文件
+        pip install -r requirements.txt
         
     - name: Run weather report script
       env:
-        # 如果您的程式需要環境變數，請在 GitHub Secrets 中設置
         EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
-        # 其他需要的環境變數...
+        CWA_API_KEY: ${{ secrets.CWA_API_KEY }}
       run: python main.py 
