@@ -13,9 +13,9 @@ logging.basicConfig(level=logging.INFO)  # 設置日誌級別為INFO
 # 用戶設定
 user_settings = {}
 
-email_sender = "shuaiahua@gmail.com" #os.environ.get("EMAIL_ADDRESS")
-email_password = "zria hsmd prtp lkmz" #os.environ.get("EMAIL_PASSWORD")
-api_key = "CWA-022D9A1D-57B9-4938-B42F-74BEEF7EEAAB" #os.environ.get("CWA_API_KEY")
+email_sender = os.environ.get("EMAIL_ADDRESS")
+email_password = os.environ.get("EMAIL_PASSWORD")
+api_key = os.environ.get("CWA_API_KEY")
 smtp_server = "smtp.gmail.com"  # Adjust based on your email provider
 smtp_port = 587  # Standard TLS port
 
